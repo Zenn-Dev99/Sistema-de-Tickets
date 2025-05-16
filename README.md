@@ -40,5 +40,32 @@ Diagrama que representa las acciones de los actores en el sistema
 La relacion `<<include>>` se uso para acciones del sistema que dependen de otras
 La relacion `<<extend>>` se uso para acciones que son opcionales o otra
 
+# Diagrama de Clases UML
+![image](https://github.com/user-attachments/assets/40dc1f68-9756-474b-b9fc-b8eaa0f6d399)
+
+  - La seleccion de patrones no fue arbitraria, ahora se explicara el porque de cada uno de ellos
+
+## Singleton
+El patrón Singleton garantiza que haya una única instancia de una clase en todo el sistema. Se usa para manejar estados globales, como una configuración compartida o una base de datos en una aplicación.
+- En nuestro modelo, la clase SistemaTickets usa Singleton porque representa el sistema centralizado de tickets.
+- Solo debe existir una instancia para gestionar los tickets y su numeración.
+- Se logra mediante un atributo estático instance y un método getInstance() que devuelve la única instancia.
+
+## Prototype
+El patrón Prototype se usa cuando necesitamos crear copias de objetos en lugar de instancias completamente nuevas. Es útil cuando la creación de un objeto es costosa o compleja.
+- En el diagrama, la clase Ticket implementa el patrón Prototype al definir un método clone(), que permite crear una copia de un ticket sin necesidad de instanciar uno nuevo desde cero.
+- Esto es útil porque los tickets suelen tener configuraciones similares, y clonarlos evita repetir lógica en la creación
+
+## Adapter
+El patrón Adapter se usa para permitir que una clase existente trabaje con otra sin modificar su estructura. Es útil cuando queremos hacer que una interfaz existente funcione con otra diferente.
+- En el modelo, la clase UsuarioAdapter actúa como intermediaria entre Usuario y el sistema de tickets.
+- El usuario podría tener métodos incompatibles con SistemaTickets, y el Adapter ajusta su comportamiento para que pueda interactuar correctamente.
+
+### Resumen
+- Prototype facilita la clonación de tickets sin crear nuevas instancias desde cero.
+- Singleton garantiza que el sistema de tickets tenga una única instancia compartida.
+- Adapter permite que Usuario pueda interactuar con SistemaTickets mediante UsuarioAdapter.
+
+
 
 
