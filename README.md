@@ -31,14 +31,14 @@ Diagrama que representa las acciones de los actores en el sistema
   - Aministrador: Es el que inicia la aplicacion asi mismo como el que da el numero de tikets que se pueden sacar, ademas puede administrar los usuarios
 
 ### Relaciones destacadas
-  - Solicitar tikket tiene un <<include>> a recivir una notificacion, ya que cuando llege su turno se le notificara
-  - Recivir un ticket de adulto mayor en un <<extend>> a solicitar ticket, ya que al hacer esta accion es opcional solicitar ese servicio
-  - Solicitar un ticket usa un <<include>> para ingresar con el rut, o sea si no se ingresa el rut no se puede solicitar
-  - Solicitar un ticket tambien usa un <<include>> a registro de tickets, osea cada ves que se solicite uno, se va aregistrar
+  - Solicitar tikket tiene un `<<include>>` a recivir una notificacion, ya que cuando llege su turno se le notificara
+  - Recivir un ticket de adulto mayor en un `<<extend>>` a solicitar ticket, ya que al hacer esta accion es opcional solicitar ese servicio
+  - Solicitar un ticket usa un `<<include>>` para ingresar con el rut, o sea si no se ingresa el rut no se puede solicitar
+  - Solicitar un ticket tambien usa un `<<include>>` a registro de tickets, osea cada ves que se solicite uno, se va aregistrar
 
 ### Justificacion de las relaciones
-La relacion <<include>> se uso para acciones del sistema que dependen de otras
-La relacion <<extend>> se uso para acciones que son opcionales o otra
+La relacion `<<include>>` se uso para acciones del sistema que dependen de otras
+La relacion `<<extend>>` se uso para acciones que son opcionales o otra
 
 
 
