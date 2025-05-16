@@ -66,6 +66,25 @@ El patrón Adapter se usa para permitir que una clase existente trabaje con otra
 - Singleton garantiza que el sistema de tickets tenga una única instancia compartida.
 - Adapter permite que Usuario pueda interactuar con SistemaTickets mediante UsuarioAdapter.
 
+# Diagrama de implementacion de clases UML
+![image](https://github.com/user-attachments/assets/78e0de5d-1a14-415d-9afb-371c80b4f2e9)
+
+## Explicación
+
+### Paquetes 
+Organizamos el sistema en módulos (Sistema de Tickets, Modelo de Datos, Usuarios y Administración) para estructurar mejor la implementación.
+### Componentes 
+Cada clase clave del sistema se representa como un componente dentro de su paquete correspondiente.
+### Relaciones
+- SistemaTickets administra la creación y anulación de tickets.
+- Ticket usa Prototype para clonación de objetos.
+- SistemaTickets es Singleton, asegurando que haya una única instancia en el sistema.
+- UsuarioAdapter implementa Adapter, facilitando la comunicación entre Usuario y SistemaTickets.
+
+# Reflexión
+Este modelo de sistema de tickets no solo estructura una solución funcional, sino que también incorpora patrones de diseño clave para mejorar su escalabilidad, reutilización y mantenimiento. Prototype optimiza la creación de objetos repetitivos, Singleton asegura que exista una única instancia centralizada para gestionar los tickets, y Adapter facilita la integración de clases con diferentes interfaces.
+
+
 
 
 
